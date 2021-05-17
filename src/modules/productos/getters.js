@@ -1,3 +1,3 @@
-export function getProdutos( state ) {
-    return state.products
-}
+export function getProductos( state ) {
+    return state.productos
+} 

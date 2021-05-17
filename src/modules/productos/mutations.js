@@ -1,3 +1,3 @@
-export function swetProductos({ state, productos}) {
-    state.productos =  productos
+export function setProductos( state, productos ) {
+    state.productos = productos
 }
