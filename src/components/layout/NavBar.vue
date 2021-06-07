@@ -26,6 +26,18 @@
               <b-dropdown-item to="/parra/tienda">Tienda</b-dropdown-item>
             </b-nav-item-dropdown>
 
+            <b-nav-item-dropdown right text="J-Cifuentes">
+              <b-dropdown-item to="/jcifuentes/slots">Slots</b-dropdown-item>
+              <b-dropdown-item to="/jcifuentes/componentes"
+                >Componentes dinamicos</b-dropdown-item
+              >
+            </b-nav-item-dropdown>
+            <b-nav-item-dropdown text="Varios">
+              <b-dropdown-item to="/Varios/formularios"
+                >Formularios</b-dropdown-item
+              >
+            </b-nav-item-dropdown>
+
             <b-nav-item-dropdown text="Practicas" right>
               <b-dropdown-item to="/practicas">Practicas</b-dropdown-item>
             </b-nav-item-dropdown>

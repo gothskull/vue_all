@@ -2,8 +2,10 @@
   <div>
     <b-card class="mb-3 shadow" :img-src="producto.imagen" img-top>
       <b-card-text>
-        <p>{{ producto.nombre }}</p>
-        ${{ Number(producto.precio) | currency }}
+        <p class="text-center">
+          <b>{{ producto.nombre }}</b>
+        </p>
+        <h4 class="text-center">${{ Number(producto.precio) | currency }}</h4>
       </b-card-text>
       <b-button
         variant="success"
@@ -27,4 +29,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+p {
+  font-size: 0.8rem;
+}
+</style>

@@ -20,6 +20,11 @@ const routes = [
   {path: '/blue', name: 'Blue',component: () => import(/* webpackChunkName: "blue" */ '../views/BluWeb/Blue.vue')},
   //PARRA
   {path: '/parra/tienda', name: 'PTienda',component: () => import(/* webpackChunkName: "ptienda" */ '../views/Parra/Tienda.vue')},
+  // CIFUENTES
+  {path: '/jcifuentes/slots', name: 'PTienda',component: () => import(/* webpackChunkName: "ptienda" */ '../views/JCifuentes/Slots.vue')},
+  {path: '/jcifuentes/componentes', name: 'PTienda',component: () => import(/* webpackChunkName: "ptienda" */ '../views/JCifuentes/ComponentesDinamicos.vue')},
+  //VARIOS
+  {path: '/varios/formularios', name: 'varFormularios', component: () => import(/* webpackChunkName: "varFormularios" */ '../views/Varios/forms/Formularios.vue')},
   //PRACICAS
   {path: '/practicas', name: 'Practicas', component: () => import(/* webpackChunkName: "practicas" */ '../views/Practicas/Practicas.vue')}
 ]

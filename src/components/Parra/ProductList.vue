@@ -1,5 +1,5 @@
 <template>
-  <b-container v-if="productos.length">
+  <div v-if="productos.length">
     <b-row>
       <b-col>
         <paginate name="products" :list="productos" :per="perPage">
@@ -24,7 +24,7 @@
         ></paginate-links>
       </b-col>
     </b-row>
-  </b-container>
+  </div>
   <!-- <b-alert v-else show variant="success" v-text="No ha productos para mostrar"> -->
   <!-- </b-alert> -->
 </template>
