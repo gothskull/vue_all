@@ -1,24 +1,24 @@
 <template>
   <b-container class="mt-5">
-    <h1 class="text-center">Validación dinámica de formularios</h1>
+    <h1 class="text-center">Validación de formularios con Vuelidate</h1>
     <h3 class="text-center">
       Fuente:
       <a
-        href="https://vueschool.io/lessons/vuejs-form-validation-diy"
+        href="https://bootstrap-vue.org/docs/reference/validation#form-validation"
         target="_blank"
         >AQUÍ</a
       >
     </h3>
     <b-row class="justify-content-center">
       <b-col cols="4">
-        <Form />
+        <FormVueValidate />
       </b-col>
     </b-row>
   </b-container>
 </template>
 
 <script>
-import Form from "@/components/Varios/Formularios/Form.vue";
+import FormVueValidate from "@/components/Varios/Formularios/FormVueValidate.vue";
 export default {
   data() {
     return {
@@ -26,7 +26,7 @@ export default {
     };
   },
   components: {
-    Form,
+    FormVueValidate,
   },
 };
 </script>

@@ -3,3 +3,4 @@ export function valorTotal( state ) {
         return (parseFloat( producto.precio ) * producto.qty) + sum
     }, 0)
 }
+

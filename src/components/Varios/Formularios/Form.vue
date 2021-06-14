@@ -1,26 +1,31 @@
 <template>
   <div class="mt-5">
-    <b-form @submit="submitForm">
+    <b-form @submit.prevent="submitForm">
       <h4 class="text-center">Formulario de ingreso</h4>
       <b-form-group label="Nombre">
-        <b-form-input placeholder="Tu nombre" v-model="nombre"></b-form-input>
-        <div v-if="error" class="error">Error {{ msgError }}</div>
+        <b-form-input
+          placeholder="Tu nombre"
+          v-model="form.nombre"
+        ></b-form-input>
+        <div v-if="!nombreIsvalido" class="error">{{ msgError }}</div>
       </b-form-group>
       <b-form-group label="Edad">
-        <b-form-input placeholder="Tu edad" v-model="edad"></b-form-input>
-        <div v-if="error" class="error">Error {{ msgError }}</div>
-      </b-form-group>
-      <!-- <b-form-group label="contraseña">
         <b-form-input
-          type="password"
-          placeholder="Contraseña"
-          v-model="contrasena"
+          placeholder="Tu edad"
+          v-model.number="form.edad"
         ></b-form-input>
-        <div v-if="error" class="error">Error {{ msgError }}</div>
-      </b-form-group> -->
-      <b-button variant="success" size="sm" block>Ingresar</b-button>
+        <div v-if="!edadIsValida" class="error">{{ msgError }}</div>
+      </b-form-group>
+      <b-button
+        type="submit"
+        variant="success"
+        size="sm"
+        block
+        :disabled="!formValid"
+        >Ingresar</b-button
+      >
     </b-form>
-    <pre>{{ $data }}</pre>
+    <!-- <pre>{{ $data }}</pre> -->
   </div>
 </template>
 
@@ -42,13 +47,28 @@ export default {
       type: Object,
     },
   },
-  methods: {
-    submitForm() {
-      const nombreIsvalido = !!this.form.nombre;
-      const edadIsValida =
+  computed: {
+    nombreIsvalido() {
+      return !!this.form.nombre;
+    },
+    edadIsValida() {
+      return (
         typeof this.form.edad === "number" &&
         this.form.edad > 12 &&
-        this.form.edad < 120;
+        this.form.edad < 120
+      );
+    },
+    formValid() {
+      return this.nombreIsvalido && this.edadIsValida;
+    },
+  },
+  methods: {
+    submitForm() {
+      if (this.formValid) {
+        console.log("formulario valido");
+      } else {
+        console.log("Invalido");
+      }
     },
   },
 };

@@ -25,8 +25,9 @@ const routes = [
   {path: '/jcifuentes/componentes', name: 'PTienda',component: () => import(/* webpackChunkName: "ptienda" */ '../views/JCifuentes/ComponentesDinamicos.vue')},
   //VARIOS
   {path: '/varios/formularios', name: 'varFormularios', component: () => import(/* webpackChunkName: "varFormularios" */ '../views/Varios/forms/Formularios.vue')},
+  {path: '/varios/vuelidate', name: 'varFormularios', component: () => import(/* webpackChunkName: "varvuelidate" */ '../views/Varios/forms/Vuelidate.vue')},
   //PRACICAS
-  {path: '/practicas', name: 'Practicas', component: () => import(/* webpackChunkName: "practicas" */ '../views/Practicas/Practicas.vue')}
+  {path: '/practicas/tiendaParra', name: 'PracticasParraTienda', component: () => import(/* webpackChunkName: "practicasTiendaParra" */ '../views/Practicas/TiendaParra.vue')}
 ]
 
 const router = new VueRouter({

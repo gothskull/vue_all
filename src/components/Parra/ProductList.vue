@@ -39,7 +39,7 @@ export default {
   data() {
     return {
       paginate: ["products"],
-      perPage: 9,
+      perPage: 6,
     };
   },
   components: {

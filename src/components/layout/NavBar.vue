@@ -36,10 +36,15 @@
               <b-dropdown-item to="/Varios/formularios"
                 >Formularios</b-dropdown-item
               >
+              <b-dropdown-item to="/Varios/vuelidate"
+                >Vuelidate</b-dropdown-item
+              >
             </b-nav-item-dropdown>
 
             <b-nav-item-dropdown text="Practicas" right>
-              <b-dropdown-item to="/practicas">Practicas</b-dropdown-item>
+              <b-dropdown-item to="/practicas/tiendaParra"
+                >Practicas tienda parra</b-dropdown-item
+              >
             </b-nav-item-dropdown>
           </b-navbar-nav>
 

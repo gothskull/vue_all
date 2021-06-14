@@ -16,3 +16,4 @@ export function agregarProducto( state, producto) {
 export function removerProductoDeCarro( state, producto ) {
     state.cart = filter( state.cart, ({id}) => id !== producto.id)
 }
+
